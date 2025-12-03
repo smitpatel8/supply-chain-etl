@@ -17,7 +17,7 @@
 ## 🏗️ Architecture
 The pipeline follows a modern **Lakehouse Architecture** leveraging the Medallion design pattern.
 
-![Architecture Diagram](https://github.com/smitpatel08/supply-chain-etl/images/)
+![Architecture Diagram](https://github.com/smitpatel08/supply-chain-etl/images/diagram1.png)
 
 ### 🛠️ Tech Stack
 * **Orchestration:** Azure Data Factory (ADF)
@@ -34,7 +34,7 @@ The pipeline follows a modern **Lakehouse Architecture** leveraging the Medallio
 ### The Control Table Strategy
 There is a single SQL table (`dbo.ControlTable`) acting as the brain of the pipeline. It stores metadata: `Source_Table`, `Load_Type` (Full/Incremental), and `Watermark_Value`.
 
-![Control Table Logic](https://github.com/smitpatel08/supply-chain-etl/images/)
+![Control Table Logic](https://github.com/smitpatel08/supply-chain-etl/images/diagram2.png)
 
 ### The Pipeline Flow (ADF)
 1.  **Lookup Control Table:** Fetches list of tables where `Active_Indicator = 1`.
@@ -98,7 +98,7 @@ The raw data moves through three quality layers using **Azure Databricks**:
 ## 🚀 Pipeline Execution Result
 *Screenshot demonstrating the Stored Procedure successfully updating the Watermark after an incremental load:*
 
-![Pipeline Run](https://github.com/smitpatel08/supply-chain-etl/images/)
+![Pipeline Run](https://github.com/smitpatel08/supply-chain-etl/images/diagram4.png)
 
 ## 📂 Source Data
 * [Download the Datasets](https://github.com/smitpatel08/Supply-Chain-ETL/tree/main/Datasets)
