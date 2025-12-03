@@ -17,7 +17,7 @@
 ## 🏗️ Architecture
 The pipeline follows a modern **Lakehouse Architecture** leveraging the Medallion design pattern.
 
-![Architecture Diagram](https://github.com/smitpatel8/supply-chain-etl/tree/main/images/diagram1.png)
+![Architecture Diagram](/images/diagram1.png)
 
 ### 🛠️ Tech Stack
 * **Orchestration:** Azure Data Factory (ADF)
@@ -34,7 +34,7 @@ The pipeline follows a modern **Lakehouse Architecture** leveraging the Medallio
 ### The Control Table Strategy
 There is a single SQL table (`dbo.ControlTable`) acting as the brain of the pipeline. It stores metadata: `Source_Table`, `Load_Type` (Full/Incremental), and `Watermark_Value`.
 
-![Control Table Logic](https://github.com/smitpatel8/supply-chain-etl/tree/main/images/diagram2.png)
+![Control Table Logic](images/diagram2.png)
 
 ### The Pipeline Flow (ADF)
 1.  **Lookup Control Table:** Fetches list of tables where `Active_Indicator = 1`.
@@ -49,7 +49,7 @@ There is a single SQL table (`dbo.ControlTable`) acting as the brain of the pipe
 ---
 
 ## 🔄 Data Transformation (Medallion Architecture)
-[View the complete PySpark Notebooks here](https://github.com/smitpatel8/Supply-Chain-ETL/tree/main/pyspark_notebooks)
+[View the complete PySpark Notebooks here](/pyspark_notebooks)
 
 The raw data moves through three quality layers using **Azure Databricks**:
 
@@ -98,7 +98,7 @@ The raw data moves through three quality layers using **Azure Databricks**:
 ## 🚀 Pipeline Execution Result
 *Screenshot demonstrating the Stored Procedure successfully updating the Watermark after an incremental load:*
 
-![Pipeline Run](https://github.com/smitpatel8/supply-chain-etl/tree/main/images/diagram4.png)
+![Pipeline Run](/images/diagram4.png)
 
 ## 📂 Source Data
-* [Download the Datasets](https://github.com/smitpatel8/Supply-Chain-ETL/tree/main/Datasets)
+* [Download the Datasets](/Datasets)
