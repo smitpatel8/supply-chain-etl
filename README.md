@@ -46,6 +46,8 @@ There is a single SQL table (`dbo.ControlTable`) acting as the brain of the pipe
     * **IF Full Load:** * Truncates destination and reloads all data.
         * **Stored Procedure:** Updates the flag to switch to "Incremental" for the next run.
 
+![Pipeline Flow](images/diagram3.png)
+
 ---
 
 ## 🔄 Data Transformation (Medallion Architecture)
